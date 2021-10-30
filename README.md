@@ -4,7 +4,11 @@
 
 ## Info
 WebApp made with Nodejs and Typescript, as purpose to serve as an example of how to make a payment with online with Vinti4 SDK
-OFFICIAL DOCUMENTATION [https://www.vinti4.cv/documentation.aspx?id=682](https://www.vinti4.cv/documentation.aspx?id=682)
+
+#
+##
+OFFICIAL DOCUMENTATION
+[https://www.vinti4.cv/documentation.aspx?id=682](https://www.vinti4.cv/documentation.aspx?id=682)
 
 ## Requisitos para rodar a WEBAPP
 
