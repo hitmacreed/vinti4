@@ -10,12 +10,12 @@ WebApp made with Nodejs and Typescript, as purpose to serve as an example of how
 
 ## Requisitos para rodar a WEBAPP
 
-### Instalar Nodejs, caso não o tenha, e seguir os passos na documentação official.
+### Install Nodejs, if you do not have it, follow the steps in the official documentation.
 [https://nodejs.org/en/](https://nodejs.org/en/)
 
 #
 
-### Clone o projecto 
+### Clone Project 
 
 ```
 git clone https://github.com/hitmacreed/vinti4.git
