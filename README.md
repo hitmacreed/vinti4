@@ -3,7 +3,7 @@
 ![img](https://ludovicwyffels.dev/static/8b378c07791d424a4afbd8bf14b92449/c5c6c/node-js-ts.png)
 
 ## Info
-WebApp made with Nodejs and Typescript, as purpose to serve as an example of how to make a payment with online with Vinti4 SDK
+WebApp made with Nodejs and Typescript, as purpose to serve as an example of how to make a payment online with Vinti4 SDK
 
 ## OFFICIAL DOCUMENTATION
 [https://www.vinti4.cv/documentation.aspx?id=682](https://www.vinti4.cv/documentation.aspx?id=682)
@@ -34,7 +34,7 @@ npm dev ==> Run on Dev Mode
 ![Alt text](/art/preview.gif)
 
  ```bash   _
-       .__(.)< (Sou um gato continua a descer... MEOW!!!)
+       .__(.)< (MEOW!!!)
         \___)   
  ~~~~~~~~~~~~~~~~~~
 ```
