@@ -8,7 +8,6 @@ WebApp made with Nodejs and Typescript, as purpose to serve as an example of how
 ## OFFICIAL DOCUMENTATION
 [https://www.vinti4.cv/documentation.aspx?id=682](https://www.vinti4.cv/documentation.aspx?id=682)
 
-## Requisitos para rodar a WEBAPP
 
 ### Install Nodejs, if you do not have it, follow the steps in the official documentation.
 [https://nodejs.org/en/](https://nodejs.org/en/)
