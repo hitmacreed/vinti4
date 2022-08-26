@@ -1,7 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import {
   SendFingerPrint,
-  SuccessFingerPrint,
   MerchantFingerPrint,
 } from './core/models/fingerPrint.model';
 import moment from 'moment';
@@ -165,7 +164,9 @@ app.post('/callback', urlencodedParser, (req: Request, res: Response) => {
     }
   } else if (req.body.UserCancelled === 'true') {
     /**
-     * @summary If NOK send tho the PAYMEMT OK PAGE OR SEND THE OBJECT RESPONSE BY CHANNEL (WEB/MOBILE)
+     * If NOK send too the payment page else
+     * OK send the object response by channel (WEB/MOBILE)
+     *
      * @example  PAGE => res.send(html)
      * @example  API => res.json(req.body)
      */
