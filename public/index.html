@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Compra</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Compra</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-</head>
-
-<body>
-
-	<div class="container ">
-		<div class="ui link cards ui column centered padded grid">
-			<div class="card">
-				<div class="image">
-					<img class="ui medium image" src="img/quadro.jpg">
-				</div>
-				<div class="content">
-					<div class="header">Cesária Évora</div>
-					<div class="meta ui padded">
-						<a>08/05/2010</a>
-					</div>
-					<div class="description">
-						Concerto no coliseu de Lisboa (HD)
-					</div>
-				</div>
-				<div class="extra content">
-					<span class="right floated">
-						<form method="post" id="form1" action="postback">
-							<div class="ui vertical animated button" tabindex="0" id="submit">
-								<div class="hidden content "> Comprar </div>
-								<div class="visible content">
-									<i class="shop icon"></i>
-								</div>
-							</div>
-						</form>
-					</span>
-					<span class="left floated">
-						<div class="ui tag labels">
-							<a class="ui label">
-								$5000.00
-							</a>
-						</div>
-					</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		$('#submit').click(function () { document.forms[0].submit() })
-	</script>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="ui link cards ui column centered padded grid">
+        <div class="card">
+          <div class="image">
+            <img class="ui medium image" src="img/quadro.jpg" />
+          </div>
+          <div class="content">
+            <div class="header">Cesária Évora</div>
+            <div class="meta ui padded">
+              <a>08/05/2010</a>
+            </div>
+            <div class="description">Concerto no coliseu de Lisboa (HD)</div>
+          </div>
+          <div class="extra content">
+            <span class="right floated">
+              <form method="post" id="form1" action="postback">
+                <div
+                  class="ui vertical animated button"
+                  tabindex="0"
+                  id="submit">
+                  <div class="hidden content">Comprar</div>
+                  <div class="visible content">
+                    <i class="shop icon"></i>
+                  </div>
+                </div>
+              </form>
+            </span>
+            <span class="left floated">
+              <div class="ui tag labels">
+                <a class="ui label"> $5000.00 </a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $("#submit").click(function () {
+        document.forms[0].submit();
+      });
+    </script>
+  </body>
 </html>

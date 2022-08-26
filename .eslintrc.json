@@ -1,0 +1,336 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:typescript-sort-keys/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            /**
+       * -----------------------------------------------------
+       * GENERIC TS FILES RULES
+       * -----------------------------------------------------
+       */
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.json",
+                    "e2e/tsconfig.json"
+                ],
+                "createDefaultProgram": true
+            },
+            "plugins": [
+                "eslint-plugin-tsdoc"
+            ],
+            "extends": [
+                "plugin:@angular-eslint/ng-cli-compat",
+                "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+                "plugin:@angular-eslint/recommended",
+                "plugin:@angular-eslint/template/process-inline-templates",
+                "plugin:import/recommended",
+                "plugin:typescript-sort-keys/recommended",
+                "plugin:prettier/recommended"
+            ],
+            "rules": {
+                "@angular-eslint/component-class-suffix": [
+                    "error",
+                    {
+                        "suffixes": [
+                            "Page",
+                            "Component"
+                        ]
+                    }
+                ],
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "type": "element",
+                        "prefix": "app",
+                        "style": "kebab-case"
+                    }
+                ],
+                "@angular-eslint/directive-selector": [
+                    "error",
+                    {
+                        "type": "attribute",
+                        "prefix": "app",
+                        "style": "camelCase"
+                    }
+                ],
+                "@typescript-eslint/member-ordering": [
+                    "error",
+                    {
+                        "default": {
+                            "memberTypes": [
+                                // Index signature
+                                "signature",
+                                // Fields
+                                "public-static-field",
+                                "protected-static-field",
+                                "private-static-field",
+                                "public-decorated-field",
+                                "protected-decorated-field",
+                                "private-decorated-field",
+                                "public-instance-field",
+                                "protected-instance-field",
+                                "private-instance-field",
+                                "public-abstract-field",
+                                "protected-abstract-field",
+                                "private-abstract-field",
+                                "public-field",
+                                "protected-field",
+                                "private-field",
+                                "static-field",
+                                "instance-field",
+                                "abstract-field",
+                                "decorated-field",
+                                "field",
+                                // Constructors
+                                "public-constructor",
+                                "protected-constructor",
+                                "private-constructor",
+                                "constructor",
+                                // Methods
+                                "public-static-method",
+                                "protected-static-method",
+                                "private-static-method",
+                                "public-decorated-method",
+                                "protected-decorated-method",
+                                "private-decorated-method",
+                                "public-instance-method",
+                                "protected-instance-method",
+                                "private-instance-method",
+                                "public-abstract-method",
+                                "protected-abstract-method",
+                                "private-abstract-method",
+                                "public-method",
+                                "protected-method",
+                                "private-method",
+                                "static-method",
+                                "instance-method",
+                                "abstract-method",
+                                "decorated-method",
+                                "method"
+                            ]
+                            // "order": "alphabetically"
+                        }
+                    }
+                ],
+                "import/named": [
+                    "off"
+                ], // Very performance taxing if enabled
+                "import/no-unresolved": "off",
+                "no-underscore-dangle": "off"
+            }
+        },
+        /**
+     * -----------------------------------------------------
+     * SPECIFIC TS FILES RULES (COMPONENTS, SERVICES ETC)
+     * -----------------------------------------------------
+     */
+        {
+            "files": [
+                "*.module.ts",
+                "*.page.ts",
+                "*.component.ts",
+                "*.service.ts",
+                "*.interceptor.ts",
+                "*.guard.ts",
+                "*.pipe.ts",
+                "*.directive.ts",
+                "*.model.ts",
+                "*.helper.ts",
+                "*.class.ts",
+                "*.abstract.ts"
+            ],
+            "rules": {
+                // Custom rules
+                "@angular-eslint/no-empty-lifecycle-method": [
+                    "warn"
+                ],
+                "@typescript-eslint/array-type": [
+                    "error"
+                ],
+                "@typescript-eslint/explicit-function-return-type": [
+                    "error",
+                    {
+                        "allowExpressions": true
+                    }
+                ],
+                "@typescript-eslint/naming-convention": [
+                    "error",
+                    {
+                        "selector": "default",
+                        "format": [
+                            "camelCase"
+                        ],
+                        "leadingUnderscore": "forbid",
+                        "trailingUnderscore": "forbid"
+                    },
+                    {
+                        "selector": "variable",
+                        "format": [
+                            "camelCase",
+                            "UPPER_CASE"
+                        ],
+                        "leadingUnderscore": "forbid",
+                        "trailingUnderscore": "forbid"
+                    },
+                    {
+                        "selector": "typeLike",
+                        "format": [
+                            "PascalCase"
+                        ]
+                    },
+                    {
+                        "selector": "enumMember",
+                        "format": [
+                            "UPPER_CASE"
+                        ]
+                    },
+                    {
+                        "selector": "interface",
+                        "format": [
+                            "PascalCase"
+                        ],
+                        "custom": {
+                            "regex": "^I[A-Z]",
+                            "match": false
+                        }
+                    }
+                ],
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "error",
+                    {
+                        "accessibility": "no-public",
+                        "overrides": {
+                            "properties": "no-public"
+                        }
+                    }
+                ],
+                "@typescript-eslint/no-explicit-any": [
+                    "warn"
+                ],
+                "@typescript-eslint/no-inferrable-types": [
+                    "error"
+                ],
+                "@typescript-eslint/no-shadow": [
+                    "error"
+                ],
+                "@typescript-eslint/no-unused-vars": [
+                    "warn"
+                ],
+                "@typescript-eslint/prefer-readonly": [
+                    "error",
+                    {
+                        "onlyInlineLambdas": true
+                    }
+                ],
+                "curly": [
+                    "error"
+                ],
+                "import/order": [
+                    "warn",
+                    {
+                        "groups": [
+                            "builtin",
+                            "external",
+                            "parent",
+                            "sibling",
+                            "index"
+                        ],
+                        "newlines-between": "always",
+                        "alphabetize": {
+                            "order": "asc",
+                            "caseInsensitive": true
+                        }
+                    }
+                ],
+                "max-len": [
+                    "error",
+                    {
+                        "code": 80,
+                        "ignoreUrls": true,
+                        "ignoreTrailingComments": true,
+                        "ignoreStrings": true,
+                        "ignorePattern": "Service:"
+                    }
+                ],
+                "padding-line-between-statements": [
+                    "error",
+                    {
+                        "blankLine": "always",
+                        "prev": "*",
+                        "next": "return"
+                    }
+                ],
+                "prefer-arrow/prefer-arrow-functions": [
+                    "error",
+                    {
+                        "singleReturnOnly": true
+                    }
+                ],
+                "spaced-comment": [
+                    "error"
+                ],
+                "tsdoc/syntax": "warn"
+            }
+        },
+        /**
+     * -----------------------------------------------------
+     * COMPONENT TEMPLATES
+     * -----------------------------------------------------
+     *
+     * See https://github.com/angular-eslint/angular-eslint#notes-for-eslint-plugin-prettier-users
+     */
+        // NOTE: WE ARE NOT APPLYING PRETTIER IN THIS OVERRIDE, ONLY @ANGULAR-ESLINT/TEMPLATE
+        {
+            "files": [
+                "*.html"
+            ],
+            "extends": [
+                "plugin:@angular-eslint/template/recommended",
+                "plugin:prettier/recommended"
+            ],
+            "rules": {}
+        },
+        // NOTE: WE ARE NOT APPLYING @ANGULAR-ESLINT/TEMPLATE IN THIS OVERRIDE, ONLY PRETTIER
+        {
+            "files": [
+                "*.html"
+            ],
+            "excludedFiles": [
+                "*inline-template-*.component.html"
+            ],
+            "extends": [
+                "plugin:prettier/recommended"
+            ],
+            "rules": {
+                // NOTE: WE ARE OVERRIDING THE DEFAULT CONFIG TO ALWAYS SET THE PARSER TO ANGULAR (SEE BELOW)
+                "prettier/prettier": [
+                    "error",
+                    {
+                        "parser": "angular"
+                    }
+                ]
+            }
+        }
+    ]
+}

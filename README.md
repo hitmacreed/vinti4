@@ -23,8 +23,7 @@ git clone https://github.com/hitmacreed/vinti4.git
 ### SETUP  WEBAPP
 ```
 npm i  ==> Install Dependencies
-npm start ==> Build Deploy Folder
-npm dev ==> Run on Dev Mode 
+npm dev ==> Run 
 ```
 #
 

@@ -1,0 +1,35 @@
+{
+    "printWidth": 80,
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": true,
+    "bracketSpacing": true,
+    "overrides": [
+        {
+            "files": "*.ts",
+            "options": {
+                "tabWidth": 2,
+                "trailingComma": "es5"
+            }
+        },
+        {
+            "files": [
+                "*.css",
+                "*.scss"
+            ],
+            "options": {
+                "tabWidth": 4
+            }
+        },
+        {
+            "files": [
+                "*.html"
+            ],
+            "options": {
+                "parser": "angular",
+                "tabWidth": 2
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.ts]
+quote_type = single
+
+# MARKDOWN
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+# CSS
+[*.{css,scss}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# Javascript and Typescript
+[*.{js,ts}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+quote_type = single
+curly_bracket_next_line = false
+spaces_around_operators = true
+spaces_around_brackets = true
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[{*.yml, *.yaml}]
+indent_style = space
+indent_size = 2

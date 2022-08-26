@@ -1,0 +1,9 @@
+# Please check .prettierignore and .gitignore when changing this file
+
+*
+!/src/
+!/src/**/
+
+# Extensions
+!*.ts
+!*.html
